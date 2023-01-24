@@ -67,7 +67,8 @@ corr3 = np.corrcoef(average_populations, total_populations)[0, 1]
 print(f'Slope of number of surviving populations: {slope1:.2f}')
 print(f'Slope of average population size: {slope2:.2f}')
 print(f'Slope of total population size: {slope3:.2f}')
-print(f'Correlation between number of Total population size and average population size: {corr1:.2f}')
+print(f'Correlation between Total population size and average population size: {corr3:.2f}')
+
 
 
 

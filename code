@@ -33,23 +33,27 @@ for i in range(n_generations):
             
  
 # Plot the results 
+
+# Number of Surviving Populations vs Generation Graph
 plt.plot(range(n_generations), surviving_populations)
 plt.xlabel("Generation")
 plt.ylabel("Number of Surviving Populations")
 plt.show()
 
+# Average Population Size vs Generation Graph
 plt.plot(range(n_generations), average_populations)
 plt.xlabel("Generation")
 plt.ylabel("Average Population Size")
 plt.show()
 
+# Total Population Size vs Generation Graph
 plt.plot(range(n_generations), total_populations) 
 plt.xlabel("Generation")
 plt.ylabel("Total Population Size")
 plt.show()     
             
 
-#Quantify results through correlations and slopes
+# Quantify results 
 x = range(n_generations)
 
 slope1, _, _, _, _ = stats.linregress(x, surviving_populations)

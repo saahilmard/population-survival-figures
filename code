@@ -9,7 +9,7 @@ n_populations  = 1000
 populations  = np.ones(n_populations)
 
 # Number of generations simulated 
-n_generations = 10
+n_generations = 50
 
 # Lists to store data 
 surviving_populations  = []

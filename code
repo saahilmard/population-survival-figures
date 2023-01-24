@@ -2,18 +2,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 
-
+# Number of poulations needed
 n_populations  = 1000
+
+# Create 1000 replicate population of one individual
 populations  = np.ones(n_populations)
 
+# Number of generations simulated 
 n_generations = 10
 
-
+# Lists to store data 
 surviving_populations  = []
 average_populations = []
 total_populations = []
 
-
+# Simulation process for i generations 
 for i in range(n_generations):
     extinct = populations <= 0
     surviving_populations.append(len(populations[~extinct]))
@@ -29,14 +32,11 @@ for i in range(n_generations):
             populations[j] = populations[j] * 2
             
  
-
+# Plot the results 
 plt.plot(range(n_generations), surviving_populations)
 plt.xlabel("Generation")
 plt.ylabel("Number of Surviving Populations")
 plt.show()
-
-
- 
 
 plt.plot(range(n_generations), average_populations)
 plt.xlabel("Generation")
@@ -49,7 +49,7 @@ plt.ylabel("Total Population Size")
 plt.show()     
             
 
-
+#Quantify results through correlations and slopes
 x = range(n_generations)
 
 slope1, _, _, _, _ = stats.linregress(x, surviving_populations)

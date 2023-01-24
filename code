@@ -34,7 +34,7 @@ for i in range(n_generations):
  
 # Plot the results 
 
-# Number of Surviving Populations vs Generation Graph
+# Population Growth Graph
 plt.plot(range(n_generations), surviving_populations)
 plt.xlabel("Generation")
 plt.ylabel("Number of Surviving Populations")
